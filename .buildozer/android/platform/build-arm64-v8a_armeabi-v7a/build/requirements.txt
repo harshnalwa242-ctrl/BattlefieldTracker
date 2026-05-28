@@ -1,0 +1,8 @@
+certifi
+chardet
+filetype
+idna
+kivymd
+requests
+six
+urllib3

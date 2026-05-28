@@ -1,0 +1,529 @@
+<CommanderScreen>:
+
+    ScrollView:
+
+        GridLayout:
+            cols: 1
+            spacing: 20
+            padding: 20
+
+            size_hint_y: None
+            height: self.minimum_height
+
+# ================= HEADER =================
+
+            Label:
+                text: "BATTLEFIELD TRACKER"
+                font_size: "32sp"
+                bold: True
+
+                size_hint_y: None
+                height: 70
+
+            Label:
+                text: "COMMANDER DASHBOARD"
+                font_size: "24sp"
+
+                size_hint_y: None
+                height: 50
+
+# ================= M14 =================
+
+            Label:
+                text: "M14"
+                font_size: "28sp"
+
+                size_hint_y: None
+                height: 50
+
+            Label:
+                text: "GRID REF : " + root.m14_grid
+
+                size_hint_y: None
+                height: 40
+
+# ---------- STRIP 1 ----------
+
+            Label:
+                text: "STRIP 1 : " + root.m14_s1
+
+                size_hint_y: None
+                height: 50
+
+                canvas.before:
+                    Color:
+                        rgba:
+                            (0,1,0,1) if root.m14_s1=="GREEN" else \
+                            (1,0.5,0,1) if root.m14_s1=="ORANGE" else \
+                            (1,0,0,1)
+
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+
+                size_hint_y: None
+                height: 60
+
+                Button:
+                    text: "RED"
+
+                    on_release:
+                        root.set_m14("Strip 1","RED")
+
+                Button:
+                    text: "ORANGE"
+
+                    on_release:
+                        root.set_m14("Strip 1","ORANGE")
+
+                Button:
+                    text: "GREEN"
+
+                    on_release:
+                        root.set_m14("Strip 1","GREEN")
+
+# ---------- STRIP 2 ----------
+
+            Label:
+                text: "STRIP 2 : " + root.m14_s2
+
+                size_hint_y: None
+                height: 50
+
+                canvas.before:
+                    Color:
+                        rgba:
+                            (0,1,0,1) if root.m14_s2=="GREEN" else \
+                            (1,0.5,0,1) if root.m14_s2=="ORANGE" else \
+                            (1,0,0,1)
+
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+
+                size_hint_y: None
+                height: 60
+
+                Button:
+                    text: "RED"
+
+                    on_release:
+                        root.set_m14("Strip 2","RED")
+
+                Button:
+                    text: "ORANGE"
+
+                    on_release:
+                        root.set_m14("Strip 2","ORANGE")
+
+                Button:
+                    text: "GREEN"
+
+                    on_release:
+                        root.set_m14("Strip 2","GREEN")
+
+# ---------- STRIP 3 ----------
+
+            Label:
+                text: "STRIP 3 : " + root.m14_s3
+
+                size_hint_y: None
+                height: 50
+
+                canvas.before:
+                    Color:
+                        rgba:
+                            (0,1,0,1) if root.m14_s3=="GREEN" else \
+                            (1,0.5,0,1) if root.m14_s3=="ORANGE" else \
+                            (0.4,0.4,0.4,1) if root.m14_s3=="NA" else \
+                            (1,0,0,1)
+
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+
+                size_hint_y: None
+                height: 60
+
+                Button:
+                    text: "NA"
+
+                    on_release:
+                        root.set_m14("Strip 3","NA")
+
+                Button:
+                    text: "RED"
+
+                    on_release:
+                        root.set_m14("Strip 3","RED")
+
+                Button:
+                    text: "ORANGE"
+
+                    on_release:
+                        root.set_m14("Strip 3","ORANGE")
+
+                Button:
+                    text: "GREEN"
+
+                    on_release:
+                        root.set_m14("Strip 3","GREEN")
+
+# ================= M16 =================
+
+            Label:
+                text: "M16"
+                font_size: "28sp"
+
+                size_hint_y: None
+                height: 50
+
+            Label:
+                text: "GRID REF : " + root.m16_grid
+
+                size_hint_y: None
+                height: 40
+
+# ---------- STRIP 1 ----------
+
+            Label:
+                text: "STRIP 1 : " + root.m16_s1
+
+                size_hint_y: None
+                height: 50
+
+                canvas.before:
+                    Color:
+                        rgba:
+                            (0,1,0,1) if root.m16_s1=="GREEN" else \
+                            (1,0.5,0,1) if root.m16_s1=="ORANGE" else \
+                            (1,0,0,1)
+
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+
+                size_hint_y: None
+                height: 60
+
+                Button:
+                    text: "RED"
+
+                    on_release:
+                        root.set_m16("Strip 1","RED")
+
+                Button:
+                    text: "ORANGE"
+
+                    on_release:
+                        root.set_m16("Strip 1","ORANGE")
+
+                Button:
+                    text: "GREEN"
+
+                    on_release:
+                        root.set_m16("Strip 1","GREEN")
+
+# ---------- STRIP 2 ----------
+
+            Label:
+                text: "STRIP 2 : " + root.m16_s2
+
+                size_hint_y: None
+                height: 50
+
+                canvas.before:
+                    Color:
+                        rgba:
+                            (0,1,0,1) if root.m16_s2=="GREEN" else \
+                            (1,0.5,0,1) if root.m16_s2=="ORANGE" else \
+                            (1,0,0,1)
+
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+
+                size_hint_y: None
+                height: 60
+
+                Button:
+                    text: "RED"
+
+                    on_release:
+                        root.set_m16("Strip 2","RED")
+
+                Button:
+                    text: "ORANGE"
+
+                    on_release:
+                        root.set_m16("Strip 2","ORANGE")
+
+                Button:
+                    text: "GREEN"
+
+                    on_release:
+                        root.set_m16("Strip 2","GREEN")
+
+# ---------- STRIP 3 ----------
+
+            Label:
+                text: "STRIP 3 : " + root.m16_s3
+
+                size_hint_y: None
+                height: 50
+
+                canvas.before:
+                    Color:
+                        rgba:
+                            (0,1,0,1) if root.m16_s3=="GREEN" else \
+                            (1,0.5,0,1) if root.m16_s3=="ORANGE" else \
+                            (0.4,0.4,0.4,1) if root.m16_s3=="NA" else \
+                            (1,0,0,1)
+
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+
+                size_hint_y: None
+                height: 60
+
+                Button:
+                    text: "NA"
+
+                    on_release:
+                        root.set_m16("Strip 3","NA")
+
+                Button:
+                    text: "RED"
+
+                    on_release:
+                        root.set_m16("Strip 3","RED")
+
+                Button:
+                    text: "ORANGE"
+
+                    on_release:
+                        root.set_m16("Strip 3","ORANGE")
+
+                Button:
+                    text: "GREEN"
+
+                    on_release:
+                        root.set_m16("Strip 3","GREEN")
+
+# ================= MARKING =================
+
+            Label:
+                text: "MARKING"
+                font_size: "28sp"
+
+                size_hint_y: None
+                height: 50
+
+            Label:
+                text: "GRID REF : " + root.marking_grid
+
+                size_hint_y: None
+                height: 40
+
+            Label:
+                text: "FRONTAGE : " + root.mark_front
+
+                size_hint_y: None
+                height: 50
+
+                canvas.before:
+                    Color:
+                        rgba:
+                            (0,1,0,1) if root.mark_front=="GREEN" else \
+                            (1,0.5,0,1) if root.mark_front=="ORANGE" else \
+                            (1,0,0,1)
+
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+
+                size_hint_y: None
+                height: 60
+
+                Button:
+                    text: "RED"
+
+                    on_release:
+                        root.set_marking("Frontage","RED")
+
+                Button:
+                    text: "ORANGE"
+
+                    on_release:
+                        root.set_marking("Frontage","ORANGE")
+
+                Button:
+                    text: "GREEN"
+
+                    on_release:
+                        root.set_marking("Frontage","GREEN")
+
+            Label:
+                text: "PERIMETER : " + root.mark_peri
+
+                size_hint_y: None
+                height: 50
+
+                canvas.before:
+                    Color:
+                        rgba:
+                            (0,1,0,1) if root.mark_peri=="GREEN" else \
+                            (1,0.5,0,1) if root.mark_peri=="ORANGE" else \
+                            (1,0,0,1)
+
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+
+                size_hint_y: None
+                height: 60
+
+                Button:
+                    text: "RED"
+
+                    on_release:
+                        root.set_marking("Marking","RED")
+
+                Button:
+                    text: "ORANGE"
+
+                    on_release:
+                        root.set_marking("Marking","ORANGE")
+
+                Button:
+                    text: "GREEN"
+
+                    on_release:
+                        root.set_marking("Marking","GREEN")
+
+# ================= DUMPING =================
+
+            Label:
+                text: "DUMPING"
+                font_size: "28sp"
+
+                size_hint_y: None
+                height: 50
+
+            Label:
+                text: "GRID REF : " + root.dumping_grid
+
+                size_hint_y: None
+                height: 40
+
+            Label:
+                text: "MINES DUMPED : " + root.dumping
+
+                size_hint_y: None
+                height: 50
+
+                canvas.before:
+                    Color:
+                        rgba:
+                            (0,1,0,1) if root.dumping=="GREEN" else \
+                            (1,0.5,0,1) if root.dumping=="ORANGE" else \
+                            (1,0,0,1)
+
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+
+                size_hint_y: None
+                height: 60
+
+                Button:
+                    text: "RED"
+
+                    on_release:
+                        root.set_dumping("RED")
+
+                Button:
+                    text: "ORANGE"
+
+                    on_release:
+                        root.set_dumping("ORANGE")
+
+                Button:
+                    text: "GREEN"
+
+                    on_release:
+                        root.set_dumping("GREEN")
+
+# ================= SOS =================
+
+            Label:
+                text: "ACTIVE SOS"
+                font_size: "28sp"
+
+                size_hint_y: None
+                height: 60
+
+            Label:
+                text: root.sos_party
+                font_size: "24sp"
+
+                size_hint_y: None
+                height: 80
+
+                canvas.before:
+                    Color:
+                        rgba:
+                            (1,0,0,1) if root.flash_state else \
+                            (0.2,0,0,1)
+
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+# ================= BUTTONS =================
+
+            Button:
+                text: "CLEAR SOS"
+
+                size_hint_y: None
+                height: 70
+
+                on_release:
+                    root.clear_sos()
+
+            Button:
+                text: "REFRESH"
+
+                size_hint_y: None
+                height: 70
+
+                on_release:
+                    root.refresh()
+
+            Button:
+                text: "LOGOUT"
+
+                size_hint_y: None
+                height: 70
+
+                on_release:
+                    root.logout()

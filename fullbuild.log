@@ -1,0 +1,15 @@
+Buildozer is running as root!
+This is not recommended, and may lead to problems later.
+Are you sure you want to continue [y/n]? Traceback (most recent call last):
+  File "/home/user/.venv/bin/buildozer", line 8, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/user/.venv/lib/python3.14/site-packages/buildozer/scripts/client.py", line 16, in main
+    Buildozer().run_command(sys.argv[1:])
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/user/.venv/lib/python3.14/site-packages/buildozer/__init__.py", line 663, in run_command
+    self.check_root()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/user/.venv/lib/python3.14/site-packages/buildozer/__init__.py", line 702, in check_root
+    cont = input('Are you sure you want to continue [y/n]? ')
+KeyboardInterrupt
