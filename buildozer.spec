@@ -111,7 +111,6 @@ fullscreen = 0
 android.minapi = 24
 android.sdk = 33
 android.ndk = 25b
-android.build_tools_version = 34.0.0
 
 # (int) Minimum API your APK / AAB will support.
 #android.minapi = 24
@@ -497,3 +496,8 @@ warn_on_root = 1
 #        buildozer --profile demo android debug
 #
 #   Environment variable overrides have priority over profile overrides.
+android.build_tools_version = 34.0.0
+android.api = 33
+android.minapi = 24
+android.sdk = 33
+android.ndk = 25b
